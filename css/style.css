@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&display=swap');
+
+/* --------Configuracion basica de body------ */
+body {
+    font-family: 'Roboto Slab', sans-serif;
+    background-color: rgba(131, 126, 126, 0.836)
+    } 
+
+/* -----tamaño del logo----- decidi ponerlo chico porque ocupaba mucho la pantalla al igual que las demas imagenes  */
+nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: aquamarine;
+}
+.logo{
+    
+    top: 17%; /* ajustar los valores para mover la imagen */
+    left: 17%;
+    width: 17%;
+    height: 17%;
+    border-radius: 45%;
+    transform: translateY(-2px);
+    transform: translateX(300px);
+}
+.dropdown-menu{
+background-color: grey;
+--bs-dropdown-link-hover-bg: #9ea2a5;
+--bs-dropdown-link-active-bg: rgb(255,255,255);
+
+}
+.intro{
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    display: flex;
+    justify-content: center;
+    transform: translateX(500px)
+}
+
+.consolas-ilustracion{
+    display: flex ;
+    justify-content: center;
+}
+/* -----link interno que lleva a la sección de contactos--- */
+.contactos-nosotros{
+    text-align: left;
+    text-decoration: none;
+    color: rgb(7, 133, 91);
+
+}
+
+
+/* ----Lista de redes sociales---- NOTA: acá la verdad me hice lio porque no se me modificaba desde etiqueta <li> asique agregué tipo de clase a etiqueta <a> también me hice un poco de lío para querer moverlo mas a la izquierda pero no lo logre */
+
+.redes {
+    text-underline-offset: none;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* -------me perdi para llamar el article Tamaño de los textos ilustrativos----  NOTA: tuve duda respecto a cuál formato de imagen es recomendado o si el mismo es indiferente */
+.consolas-ilustracion article{
+    width: 300px;
+}
+.consolas-ilustracion article img{
+    width: 100%;
+}

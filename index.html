@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="esp">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Evolucion de consolas</title>
+        <!-- Traigo bootstrap de manera CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+                crossorigin="anonymous">
+
+        <!-- linkeado local al archivo css -->
+        <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+
+        <!--    encabezado logo  -->
+
+        <header>
+                <!-- refresca la pagina al tocar el logo -->
+
+
+
+                <!-- menu de navegacion creado con bootstrap-->
+                <nav class="navbar navbar-expand-lg navbar-grey bg-grey">
+                        <div class="container-fluid">
+                                <a href="./index.html">
+                                        <img class="logo" src="./img/logomando.png" alt="logo consola">
+                                </a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                        <ul class="navbar-nav ms-auto navbarNavDropdown">
+                                                <li class="nav-item">
+                                                        <a class="nav-link" href="#contactos">Nosotros</a>
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Consolas
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item"
+                                                                                href="./pages/computadora.html">Computadora</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                                href="./pages/nintendo.html">Nintendo</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                                href="./pages/playstation.html">Playstation</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                                href="./pages/xbox.html">Xbox</a></li>
+                                                                <li><a class="dropdown-item"
+                                                                                href="./pages/otros.html">Otros</a></li>
+                                                        </ul>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </nav>
+                <p class="intro">Las consolas de videojuegos que conocemos hoy en día no siempre fueron de la misma
+                        manera con los gráficos que podemos encontrar sino que tuvieron una gran evolución a lo largo de
+                        muchos años.</p>
+        </header>
+
+<hr>
+        <!--  main (contenido principal y lo primero que vea el usuario) -->
+
+        <main>
+
+                <!-- traigo el video mediante iframe -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/R5ROTfHOvNI?si=A47bzbn0jAPrSD2F"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+        </main>
+
+
+        <!-- sección  -->
+        <section class="consolas-ilustracion">
+
+                <!-- articulos--traigo las imagenes de manera local  -->
+                <article>
+                        <img class="ilustrative" src="./img/computadora-gamer/pcgamer.jpg" alt="computadora">
+                        <p>La computadora suele ser el primer contacto de todas las personas con los videojuegos ya sea
+                                por un juego en sí o un anuncio además de que ofrece "emuladores" para juegar contenido
+                                de otras consolas</p>
+                </article>
+
+
+                <article>
+                        <img class="ilustrative" src="./img/playstation/blob_1ckn.jpg" alt="playstation">
+                        <p>La Playstation fue intoducida el 3 de diciembre de 1994 en Japón, la consola pertenece a la
+                                marca Sony Interactive Entertainment y actualmente es una consola altamente elegida.</p>
+                </article>
+
+
+                <article>
+                        <img class="ilustrative" src="./img/nintendo/DS.jpg" alt="nintendods">
+                        <p>Creada por la empresa Nintendo, esta consola salió a la venta por primera vez en Japón el 21
+                                de abril de 1989. Se suele elegir Nintendo porque presentó múltiples consolas portátiles
+                                para juegar y llevar a donde sea.</p>
+                </article>
+
+
+        </section>
+
+        <!--       --------          Formulario    ---------            -->
+        <h2>Pequeña encuesta</h2> <br>
+        </br>
+        <!-- utilizacion del metodo post para mejor seguridad -->
+        <form action="" method="post">
+
+                <!-- Escribir solo en numeros la edad -->
+                <label for="edad">Edad</label>
+                <input type="number" required id="edad" placeholder="Edad actual"><br>
+                <br>
+                <!-- Boton de radio -->
+                <label for="sexo">Genero</label>
+                <br>
+
+                <label for="hombre">Hombre</label>
+                <input type="radio" name="sexo" value="hombre"> <br>
+
+                <label for="mujer">Mujer</label>
+                <input type="radio" name="sexo" value="mujer"> <br>
+
+                <label for="otro">Otros</label>
+                <input type="radio" name="sexo" value="otro"> <br>
+                <br>
+
+                <label for="consola">Primera consola</label>
+                <br>
+
+                <label for="nintendo">Nintendo</label>
+                <input type="radio" name="consola" value="nintendo"> <br>
+
+                <label for="sega">Sega</label>
+                <input type="radio" name="consola" value="sega"> <br>
+
+                <label for="playstation">PlayStation</label>
+                <input type="radio" name="consola" value="playstation"> <br>
+
+                <label for="computadora">Computadora</label>
+                <input type="radio" name="consola" value="computadora"> <br>
+
+                <label for="xbox">Xbox</label>
+                <input type="radio" name="consola" value="xbox"> <br>
+
+                <label for="otros">Otros</label>
+                <input type="radio" name="consola" value="otros"> <br>
+                <br>
+                <!------------------------Checkbox---------------- -->
+                <label for="fav">Consola favorita</label>
+                <br>
+
+                <label for="">Nintendo</label>
+                <input type="checkbox">
+
+                <label for="">Sega</label>
+                <input type="checkbox">
+
+                <label for="">PlayStation</label>
+                <input type="checkbox">
+
+                <label for="">Computadora</label>
+                <input type="checkbox">
+
+                <label for="">Xbox</label>
+                <input type="checkbox">
+
+                <label for="">Otros</label>
+                <input type="checkbox"><br>
+
+
+
+                <br>
+                <!-- Caja de comentarios -->
+                <label for="">Comente su primer juego</label><br>
+                </>
+                <textarea name="" id="" cols="100" rows="30" placeholder="Escriba un comentario"></textarea> <br>
+
+                <!-- Tipo de botones -->
+                <input type="submit">
+                <input type="reset">
+
+
+
+        </form>
+
+        <hr><!-- linea separadora -->
+
+        <!--   pie de página    -->
+        <footer>
+                <p>Copyright todos los derechos reservados.</p>
+                <!-- link interno trae hacia las redes sociales y los mismos son links externos -->
+                <ul id="contactos">
+                        <li>
+                                <a class="redes" href="https://www.facebook.com">Facebook</a>
+                        </li>
+
+
+                        <li>
+                                <a class="redes" href="https://www.instagram.com">Instagram</a>
+                        </li>
+
+
+                        <li>
+                                <a class="redes" href="https://www.whatsapp.com">Whatsapp</a>
+                        </li>
+
+
+                </ul>
+
+
+        </footer>
+
+
+        <!-- Etiqueta de Bootstrap javascript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                crossorigin="anonymous"></script>
+
+</body>
+
+</html>
