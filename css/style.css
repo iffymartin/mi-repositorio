@@ -6,43 +6,108 @@ body {
     background-color: rgba(131, 126, 126, 0.836)
     } 
 
+header {
+        display: flex;
+        justify-content: space-between; /* Distribuye los elementos en el header */
+        align-items: center; /* Centra verticalmente los elementos */
+        background-color: #7a7777; /* Cambia el color de fondo del header */
+        color: rgb(31, 29, 29); /* Cambia el color del texto */
+        padding: 10px 75px; /* Agrega espacio interno al header según sea necesario */
+    }
+    
+
 /* -----tamaño del logo----- decidi ponerlo chico porque ocupaba mucho la pantalla al igual que las demas imagenes  */
 nav{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     color: aquamarine;
+    margin-bottom: 50px
 }
 .logo{
-    
-    top: 17%; /* ajustar los valores para mover la imagen */
-    left: 17%;
-    width: 17%;
-    height: 17%;
-    border-radius: 45%;
-    transform: translateY(-2px);
-    transform: translateX(300px);
+    border-radius: 55%;
+    width: 100px; /* Ajusta el tamaño del logo*/
+    height: 100px; /* Ajusta el tamaño del logo */
+    margin: 0 auto; /* Centra horizontalmente el logo en el header */
+    display: block; /* Evita que el logo afecte otros elementos en la misma línea */
+}
+
+.navbar navbar-expand-lg navbar-grey bg-grey{
+    margin-bottom: 20px
+    display: flex; 
+    color: grey
 }
 .dropdown-menu{
-background-color: grey;
---bs-dropdown-link-hover-bg: #9ea2a5;
---bs-dropdown-link-active-bg: rgb(255,255,255);
+background-color: rgba(116, 116, 116, 0.8);
 
+--bs-dropdown-link-hover-bg: #525455;
+--bs-dropdown-link-active-bg: rgb(77, 76, 76);
 }
 .intro{
-    display: flex;
-    justify-content: center;
+    text-align: center; /* Centra el texto horizontalmente */
+    max-width: 800px; /* Limita el ancho máximo para evitar que ocupe toda la pantalla */
+    margin: 2px; /* Centra horizontalmente el elemento */
+    padding: 20px; /* Añade espaciado interno para mejorar la legibilidad */
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-left: 200px;
+    margin-right: 525px;
+
 }
 iframe{
-    display: flex;
-    justify-content: center;
-    transform: translateX(500px)
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px; /* margen inferior */
+    margin-top: 30px;
+    width: 850px; /* Ancho deseado */
+    height: 600px; /* Altura deseada */
+    border: 3px solid #3333335b; /* Cambiar los bordes */
 }
 
-.consolas-ilustracion{
-    display: flex ;
-    justify-content: center;
+.consolas-ilustracion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    margin-top: 100px
+    
 }
+
+article {
+    display: flex; /* Establece un contenedor flexible */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    flex-basis: 570px; /* Ancho de cada artículo con espacio entre ellos */
+    margin-bottom: 100px; /* Espacio entre los artículos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+    width: 100%
+
+}
+.ilustrative{
+    width: 400px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    text-align: center;
+    margin: 100px 
+    display:block
+}
+article p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .consolas-ilustracion {
+        flex-direction: column; /* Cambia la dirección de flexbox a columna en dispositivos móviles */
+        align-items: center;
+    }
+
+}
+
+
 /* -----link interno que lleva a la sección de contactos--- */
 .contactos-nosotros{
     text-align: left;
@@ -61,10 +126,3 @@ iframe{
 }
 
 
-/* -------me perdi para llamar el article Tamaño de los textos ilustrativos----  NOTA: tuve duda respecto a cuál formato de imagen es recomendado o si el mismo es indiferente */
-.consolas-ilustracion article{
-    width: 300px;
-}
-.consolas-ilustracion article img{
-    width: 100%;
-}
