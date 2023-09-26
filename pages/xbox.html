@@ -16,14 +16,49 @@
     <!--    encabezado logo  -->
   
     <header>
-      <!-- refresca la pagina al tocar el logo -->
-      <a href="../index.html">
-        <img class="logo" src="../img/logomando.png"
-                      alt="logo consola">
-      </a>
+                    <!-- menu de navegacion creado con bootstrap-->
+                    <nav class="navbar navbar-expand-lg navbar-grey bg-grey">
+                        <div class="container-fluid">
+                                <a href="../index.html">
+                                        <img class="logo" src="../img/logomando.png" alt="logo consola">
+                                </a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                        <ul class="navbar-nav ms-auto navbarNavDropdown">
+                                                <li class="nav-item">
+                                                        <a class="nav-link" href="#contactos">Nosotros</a>
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Consolas
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item"
+                                                                                href="../pages/computadora.html">Computadora</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                                href="../pages/nintendo.html">Nintendo</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                                href="../pages/playstation.html">Playstation</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                                href="../pages/xbox.html">Xbox</a></li>
+                                                                <li><a class="dropdown-item"
+                                                                                href="../pages/otros.html">Otros</a></li>
+                                                        </ul>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </nav>
       <p class="intro">Xbox es una marca de videojuegos creada por y propiedad de Microsoft. La marca fue introducida por primera vez el 8 de noviembre de 2001 en los Estados Unidos.</p>
-      <!-- link interno hacia contactos -->
-      <a class="contactos-nosotros"  href="#contactos">Nosotros</a>
+
+
   </header>
   
          <!--  main (contenido principal y lo primero que vea el usuario) -->
@@ -65,18 +100,18 @@
                   
                   </section>
                   <br>
-  <!-- Encuesta -->
-  <form action="" method="post">
-                  <!-- Caja de comentarios -->
-                  <label for="">Comente su primer contacto con Xbox.</label><br>
-                  </>
-                  <textarea name="" id="" cols="100" rows="30" placeholder="Escriba un comentario"></textarea> <br>
-  
-                  <!-- Tipo de botones -->
-                  <input type="submit">
-                  <input type="reset">
-  
-  </form>
+<!-- Encuesta -->
+<form action="" method="post">
+        <div class="form-group">
+            <label for="comentarios">Comente su primer xbox:</label><br>
+            <textarea name="comentarios" id="comentarios" cols="100" rows="5" placeholder="Escriba un comentario"></textarea>
+        </div>
+        <!-- Tipo de botones -->
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+    </form>
+    </div>
+
   
   <hr><!-- linea separadora -->
   
@@ -109,6 +144,9 @@
   
   
   
-  
+          <!-- Etiqueta de Bootstrap javascript -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+          crossorigin="anonymous"></script>
   </body>
 </html>

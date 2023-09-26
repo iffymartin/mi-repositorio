@@ -109,88 +109,43 @@
 
         </section>
 <hr>
-        <!--       --------          Formulario    ---------            -->
-        <h2>Pequeña encuesta</h2> <br>
-        </br>
-        <!-- utilizacion del metodo post para mejor seguridad -->
+<div class="container">
+        <h2>Pequeña encuesta</h2>
         <form action="" method="post">
-
-                <!-- Escribir solo en numeros la edad -->
-                <label for="edad">Edad</label>
-                <input type="number" required id="edad" placeholder="Edad actual"><br>
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="number" required id="edad" placeholder="Edad actual">
+            </div>
+            <div class="form-group">
+                <label>Género:</label>
+                <div class="radio-group">
+                    <label for="hombre"><input type="radio" name="sexo" value="hombre"> Hombre</label>
+                    <label for="mujer"><input type="radio" name="sexo" value="mujer"> Mujer</label>
+                    <label for="otro"><input type="radio" name="sexo" value="otro"> Otro</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="fav">Consola favorita:</label>
                 <br>
-                <!-- Boton de radio -->
-                <label for="sexo">Genero</label>
-                <br>
-
-                <label for="hombre">Hombre</label>
-                <input type="radio" name="sexo" value="hombre"> <br>
-
-                <label for="mujer">Mujer</label>
-                <input type="radio" name="sexo" value="mujer"> <br>
-
-                <label for="otro">Otros</label>
-                <input type="radio" name="sexo" value="otro"> <br>
-                <br>
-
-                <label for="consola">Primera consola</label>
-                <br>
-
-                <label for="nintendo">Nintendo</label>
-                <input type="radio" name="consola" value="nintendo"> <br>
-
-                <label for="sega">Sega</label>
-                <input type="radio" name="consola" value="sega"> <br>
-
-                <label for="playstation">PlayStation</label>
-                <input type="radio" name="consola" value="playstation"> <br>
-
-                <label for="computadora">Computadora</label>
-                <input type="radio" name="consola" value="computadora"> <br>
-
-                <label for="xbox">Xbox</label>
-                <input type="radio" name="consola" value="xbox"> <br>
-
-                <label for="otros">Otros</label>
-                <input type="radio" name="consola" value="otros"> <br>
-                <br>
-                <!------------------------Checkbox---------------- -->
-                <label for="fav">Consola favorita</label>
-                <br>
-
-                <label for="">Nintendo</label>
-                <input type="checkbox">
-
-                <label for="">Sega</label>
-                <input type="checkbox">
-
-                <label for="">PlayStation</label>
-                <input type="checkbox">
-
-                <label for="">Computadora</label>
-                <input type="checkbox">
-
-                <label for="">Xbox</label>
-                <input type="checkbox">
-
-                <label for="">Otros</label>
-                <input type="checkbox"><br>
-
-
-
-                <br>
-                <!-- Caja de comentarios -->
-                <label for="">Comente su primer juego</label><br>
-                </>
-                <textarea name="" id="" cols="100" rows="30" placeholder="Escriba un comentario"></textarea> <br>
-
-                <!-- Tipo de botones -->
-                <input type="submit">
-                <input type="reset">
-
-
-
+                <label for="nintendo"><input type="checkbox" name="consola_fav" value="nintendo"> Nintendo</label>
+                <label for="sega"><input type="checkbox" name="consola_fav" value="sega"> Sega</label>
+                <label for="playstation"><input type="checkbox" name="consola_fav" value="playstation"> PlayStation</label>
+                <label for="computadora"><input type="checkbox" name="consola_fav" value="computadora"> Computadora</label>
+                <label for="xbox"><input type="checkbox" name="consola_fav" value="xbox"> Xbox</label>
+                <label for="otros"><input type="checkbox" name="consola_fav" value="otros"> Otros</label>
+            </div>
+            <!-- Caja de comentarios dentro del formulario -->
+            <div class="form-group">
+                <label for="comentarios">Comente su primer juego:</label><br>
+                <textarea name="comentarios" id="comentarios" cols="100" rows="5" placeholder="Escriba un comentario"></textarea>
+            </div>
+            <!-- Tipo de botones -->
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
         </form>
+    </div>
+
+
 
         <hr><!-- linea separadora -->
 
