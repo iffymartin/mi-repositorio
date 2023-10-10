@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/* Encabezado */
+header {
+  display: flex;
+  justify-content: center; /* Cambia ";" por ":" */
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+header .logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* Menú de navegación */
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.nav-list li {
+  margin-right: 20px;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Nosotros */
+#nosotros {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Contenido Principal (Video) */
+main {
+  text-align: center;
+  padding: 20px;
+}
+main iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Sección de Artículos */
+.articulos {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.articulos .article {
+  text-align: center;
+}
+.articulos .article img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Pequeña encuesta */
+.encuesta {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+.encuesta form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.encuesta form label, .encuesta form select, .encuesta form textarea {
+  margin: 10px 0;
+}
+.encuesta form button[type=submit], .encuesta form button[type=reset] {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.encuesta form:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+footer .redes-sociales {
+  list-style-type: none;
+  padding: 0;
+}
+footer .redes-sociales li {
+  display: inline;
+  margin-right: 10px;
+}
+footer .redes-sociales li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}/*# sourceMappingURL=style.css.map */
