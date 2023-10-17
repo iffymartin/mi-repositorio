@@ -1,3 +1,12 @@
+$color-primario: #007BFF;
+$color-fondo: #f2f2f2;
+
+@mixin centrar-elemento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Encabezado */
 header {
   display: flex;
@@ -67,9 +76,10 @@ main {
   }
 }
 
-/* Pequeña encuesta */
+/* Encuesta */
 .encuesta {
-  background-color: #f2f2f2;
+  background-color: $color-fondo;
+  color: $color-primario;
   padding: 20px;
   text-align: center;
 
@@ -83,7 +93,7 @@ main {
       }
 
       button[type="submit"], button[type="reset"] {
-          background-color: #007BFF;
+          background-color: $color-primario;
           color: #fff;
           padding: 10px 20px;
           border: none;

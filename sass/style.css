@@ -62,9 +62,10 @@ main iframe {
   cursor: pointer;
 }
 
-/* Pequeña encuesta */
+/* Encuesta */
 .encuesta {
   background-color: #f2f2f2;
+  color: #007BFF;
   padding: 20px;
   text-align: center;
 }
