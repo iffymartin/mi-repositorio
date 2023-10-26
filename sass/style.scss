@@ -1,6 +1,6 @@
 $color-primario: #000000;
 $color-fondo: #333;
-$carousel-width: 70%;
+$carousel-width: 50%;
 $caption-width: 60%;   // Ancho del contenido del carrusel
 $arrow-distance: 50px; // Distancia de las flechas
 $carousel-control-color:             $color-primario;
@@ -107,6 +107,7 @@ main {
 .carousel.carousel-dark {
   width: $carousel-width;
   margin: 0 auto;
+  padding-bottom: 20px;
   .carousel-inner {
     text-align: center;
   }

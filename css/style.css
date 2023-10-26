@@ -53,8 +53,9 @@ main iframe {
 }
 
 .carousel.carousel-dark {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 .carousel.carousel-dark .carousel-inner {
   text-align: center;
@@ -140,3 +141,5 @@ hr {
   border-top: var(--bs-border-width) solid;
   opacity: 0;
 }/*# sourceMappingURL=style.css.map */
+.color-change-5x{-webkit-animation:color-change-5x 6s linear infinite alternate both;animation:color-change-5x 6s linear infinite alternate both} /*animacion*/
+@-webkit-keyframes color-change-5x{0%{background:#19dcea}25%{background:#b22cff}50%{background:#ea2222}75%{background:#f5be10}100%{background:#3bd80d}}@keyframes color-change-5x{0%{background:#19dcea}25%{background:#b22cff}50%{background:#ea2222}75%{background:#f5be10}100%{background:#3bd80d}} /*animacion y modificar colores*/
