@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Evolucion de otras consolas a lo largo de la historia y como fueron posicionandose en el mercado de la industria de los videojuegos">
+    <meta name="keywords" content="videojuegos, nintendo, xbox, computadora, consolas, playstation, sega, atari, gamer, pc, mercado, pong, Odyssey, japon, videoconsola">
+    <meta name="author" content="martin">
     <title>Otras consolas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
     crossorigin="anonymous">
 <!-- linkeado local al archivo css -->
-<link rel="stylesheet" href="../sass/style.css">
+<link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="color-change-5x">
    <!--    encabezado logo  -->
    <header>
         <a href="../index.html"><img class="logo" src="../img/logomando.png" alt="Logo"></a>
@@ -21,12 +24,11 @@
                 <li><a href="../pages/playstation.html">PlayStation</a></li>
                 <li><a href="../pages/xbox.html">Xbox</a></li>
                 <li><a href="../pages/otros.html">Otros</a></li>
+                <li id="nosotros"><a href="#redes-sociales">Nosotros</a></li>
             </ul>
         </nav>
     
 </header>
-<!-- Nosotros -->
-<section id="nosotros"><a href="#redes-sociales"><h2>Nosotros</h2></a></section>
        <!--  main (contenido principal y lo primero que vea el usuario) -->
                 <main>
                         <div class="responsive-iframe">
@@ -34,42 +36,55 @@
                         </div>
                         
                 </main>
-                <p class="intro">Hubo muchas evoluciones de otras consolas además de las líderes del mercado de hoy en día.</p>
-        <!-- sección  -->
-                <section class="articulos">
-                <!-- articulos--traigo las imagenes de manera local  -->
-                        <article>
-                                <img class="img-fluid" src="../img/otros/Atari-unojpeg.jpeg" alt="Primer-Atari">
-                                <p>
-                                    Pong es una consola creada por Atari en 1975, y la segunda videoconsola de la historia. Fue la versión doméstica de la arcade PONG también lanzada por atari unos años antes. No llevaba cartuchos, sino que tenía solo un juego, el Pong, imitando el tenis de mesa de Magnavox Odyssey
-                                </p>
-                        </article>
-                        <article>
-                                <img class="img-fluid" src="../img/otros/Magnavox-Odysseyjpeg.jpg" alt="Primer-odyssey">
-                                <p>
-                                    Magnavox Odyssey es la primera videoconsola de la historia. Fue comercializada por la filial de Philips en Estados Unidos y lanzada en las tiendas estadounidenses en septiembre de 1972.
-                                </p>
-                        </article>
-                        <article>
-                                <img class="img-fluid" src="../img/otros/sega-jpeg.jpg" alt="Primer-sega">
-                                <p>
-                                    SG-1000 es la primera videoconsola de sobremesa desarrollada por Sega. Fue lanzada al mercado en una primera fase de pruebas en Japón en 1982 y finalmente lanzada al mercado japonés en julio de 1983.
-                                </p>
-                        </article>
-                </section>
-                <br>
-<!-- Encuesta -->
-<!-- Encuesta -->
-<form action="" method="post">
-        <div class="form-group">
-            <label for="comentarios">Comente su primera consola:</label><br>
-            <textarea name="comentarios" id="comentarios" cols="100" rows="5" placeholder="Escriba un comentario"></textarea>
-        </div>
-        <!-- Tipo de botones -->
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Limpiar">
-    </form>
+<!-- Sección de Artículos personalizada con SASS y bootstrap -->
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="../img/otros/Atari-unojpeg.jpeg" class="d-block w-100" alt="PRIMER-ATARI">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Atari</h5>
+            <p>Pong, creada por Atari en 1975, y la segunda videoconsola de la historia. Fue la versión doméstica de PONG también lanzada por atari unos años antes. No llevaba cartuchos, sino que tenía solo un juego, el Pong, imitando el tenis de mesa de Magnavox Odyssey</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="../img/otros/Magnavox-Odysseyjpeg.jpg" class="d-block w-100" alt="primerodyssey">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Odyssey</h5>
+            <p>Magnavox Odyssey es la primera videoconsola de la historia. Fue comercializada por la filial de Philips en Estados Unidos y lanzada en las tiendas estadounidenses en septiembre de 1972.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/otros/sega-jpeg.jpg" class="d-block w-100" alt="primersega">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Sega</h5>
+            <p>SG-1000, primera videoconsola de sobremesa desarrollada por Sega, fue lanzada al mercado en fase de prueba en Japón en 1982 y finalmente lanzada al mercado japonés en julio de 1983.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <hr>
+<!-- Encuesta -->
+<section class="encuesta">
+    <form action="#" method="post">
+    <label for="comentarios">Comentarios:</label>
+    <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="Escribe tus comentarios aquí"></textarea>
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpiar</button>
+    </form>
+</section>
 <hr><!-- linea separadora -->
 <!-- Footer -->
 <footer id="redes-sociales">
