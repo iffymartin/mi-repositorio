@@ -7,7 +7,7 @@
     <!-- Enlace al de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilos CSS personalizados -->
-    <link rel="stylesheet" href="./sass/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <!-- Encabezado -->
@@ -20,11 +20,10 @@
                 <li><a href="./pages/playstation.html">PlayStation</a></li>
                 <li><a href="./pages/xbox.html">Xbox</a></li>
                 <li><a href="./pages/otros.html">Otros</a></li>
+                <li id="nosotros"><a href="#redes-sociales">Nosotros</a></li>
             </ul>
         </nav>
     </header>
-<!-- Nosotros -->
-<section id="nosotros"><a href="#redes-sociales"><h2>Nosotros</h2></a></section>
     <!-- Contenido Principa-->
     <main>
         <!-- Contenedor del iframe-->
@@ -34,27 +33,45 @@
     
     </main>
 
-    <!-- Sección de Artículos -->
-    <section class="articulos">
-        <article>
-            <a href="./pages/computadora.html"><img src="./img/computadora-gamer/img-pcgamer1.jpeg" class="img-fluid" alt="Imagen 1"></a>
-            <p>La computadora suele ser el primer contacto de todas las personas con los videojuegos ya sea
-                por un juego en sí o un anuncio además de que ofrece "emuladores" para juegar contenido
-                de otras consolas</p>
-        </article>
-        <article>
-            <a href="./pages/playstation.html"><img src="./img/playstation/img-playstation1.jpg" class="img-fluid" alt="Imagen 2"></a>
-            <p>La Playstation fue intoducida el 3 de diciembre de 1994 en Japón, la consola pertenece a la
-                marca Sony Interactive Entertainment y actualmente es una consola altamente elegida.</p>
-        </article>
-        <article>
-            <a href="./pages/nintendo.html"><img src="./img/nintendo/img-ds1.jpg" class="img-fluid" alt="Imagen 3"></a>
-            <p>Creada por la empresa Nintendo, esta consola salió a la venta por primera vez en Japón el 21
-                de abril de 1989. Se suele elegir Nintendo porque presentó múltiples consolas portátiles
-                para juegar y llevar a donde sea.</p>
-        </article>
-    </section>
-
+<!-- Sección de Artículos personalizada con SASS y bootstrap -->
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="./img/computadora-gamer/img-pcgamer1.jpeg" class="d-block w-100" alt="img1">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Computadora</h5>
+            <p>Suele ser el primer contacto de todas las personas con los videojuegos.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="./img/playstation/img-playstation1.jpg" class="d-block w-100" alt="img2">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Playstation</h5>
+            <p>Introducida el 3 de diciembre de 1994 en Japón y actualmente es una consola altamente elegida.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/nintendo/img-ds1.jpg" class="d-block w-100" alt="img3">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Nintendo</h5>
+            <p>Se suele elegir Nintendo porque presentó múltiples consolas portátiles.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
     <!-- Pequeña encuesta -->
     <section class="encuesta">
         <h2>Pequeña encuesta</h2>
@@ -86,7 +103,7 @@
             <button type="reset">Limpiar</button>
         </form>
     </section>
-
+<hr>
 <!-- Footer -->
 <footer id="redes-sociales">
         <ul class="redes-sociales">

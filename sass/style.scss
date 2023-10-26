@@ -1,10 +1,55 @@
-$color-primario: #007BFF;
-$color-fondo: #f2f2f2;
+$color-primario: #000000;
+$color-fondo: #333;
+$carousel-width: 70%;
+$caption-width: 60%;   // Ancho del contenido del carrusel
+$arrow-distance: 50px; // Distancia de las flechas
+$carousel-control-color:             $color-primario;
+$carousel-control-width:             50%;
+$carousel-control-opacity:           .9;
+$carousel-control-hover-opacity:     .9;
+$carousel-control-transition:        opacity .15s ease;
+$carousel-control-spacing: 15px; // Espacio entre las flechas
+$carousel-control-opacity: 0.7; // Opacidad de las flechas
+
+$carousel-indicator-width:           50px;
+$carousel-indicator-height:          3px;
+$carousel-indicator-hit-area-height: 10px;
+$carousel-indicator-spacer:          3px;
+$carousel-indicator-opacity:         .9;
+$carousel-indicator-active-bg:       $color-primario;
+$carousel-indicator-active-opacity:  5;
+$carousel-indicator-transition:      opacity .6s ease;
+
+$carousel-caption-width:             70%;
+$carousel-caption-color:             $color-primario;
+$carousel-caption-padding-y:         1.25rem;
+$carousel-caption-spacer:            1.25rem;
+$carousel-caption-font-size: 20px;
+$carousel-caption-font-weight: bold;
+$carousel-caption-background-color: rgba(58, 56, 55, 0.7); /* Un color naranja semitransparente */
+
+$carousel-content-width: 60%; // Ancho del contenido (img, h5, p)
+
+$carousel-control-icon-width:        2rem;
+
+$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+
+$carousel-transition-duration:       .6s;
+$carousel-transition:                transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+// Variables para el estilo de h5 y p
+$carousel-h5-color: #fff; // Color del título h5
+$carousel-h5-font-size: 24px; // Tamaño de fuente del título h5
+$carousel-p-color: #ccc; // Color del párrafo p
+$carousel-p-font-size: 16px; // Tamaño de fuente del párrafo p
 
 @mixin centrar-elemento {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+body{
+  background-color: $color-primario;
 }
 
 /* Encabezado */
@@ -44,8 +89,8 @@ header {
 
 /* Nosotros */
 #nosotros {
-  background-color: #f2f2f2;
-  padding: 20px;
+  background-color: $color-fondo;
+  padding: 0px;
 }
 
 /* Contenido Principal (Video) */
@@ -58,30 +103,44 @@ main {
       height: auto;
   }
 }
-
-/* Sección de Artículos */
-.articulos {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px;
-
-  .article {
-      text-align: center;
-
-      img {
-          max-width: 100%;
-          height: auto;
-          cursor: pointer;
-      }
+// Estilo del carrusel
+.carousel.carousel-dark {
+  width: $carousel-width;
+  margin: 0 auto;
+  .carousel-inner {
+    text-align: center;
+  }
+  .carousel-caption {
+    width: $carousel-content-width;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  h5 {
+    color: $carousel-h5-color;
+    font-size: $carousel-h5-font-size;
+  }
+  p {
+    color: $carousel-p-color;
+    font-size: $carousel-p-font-size;
+  }
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 
+// Estilo de las flechas
+.carousel-control-prev, .carousel-control-next {
+  margin-right: $carousel-control-spacing;
+  opacity: $carousel-control-opacity;
+}
 /* Encuesta */
 .encuesta {
   background-color: $color-fondo;
   color: $color-primario;
   padding: 20px;
   text-align: center;
+  border-color: #333;
 
   form {
       display: flex;
@@ -94,7 +153,7 @@ main {
 
       button[type="submit"], button[type="reset"] {
           background-color: $color-primario;
-          color: #fff;
+          color: #333;
           padding: 10px 20px;
           border: none;
           border-radius: 5px;
@@ -104,7 +163,7 @@ main {
       }
 
       &:hover {
-          background-color: #0056b3;
+          background-color: #333;
       }
   }
 }
@@ -131,4 +190,11 @@ footer {
           }
       }
   }
+}
+hr {
+  margin: 1px 0;
+  color: inherit;
+  border: 0;
+  border-top: var(--bs-border-width) solid;
+  opacity: 0;
 }
